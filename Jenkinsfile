@@ -12,7 +12,7 @@ pipeline {
 
         stage('Test Registration Form') {
             steps {
-                bat 'python test_form.py'
+                bat '"C:\\Users\\chauh\\AppData\\Local\\Python\\bin\\python.exe" test_form.py'
             }
         }
     }
@@ -21,6 +21,7 @@ pipeline {
         success {
             echo 'All tests passed successfully!'
         }
+
         failure {
             echo 'Pipeline failed! Check test results.'
         }
